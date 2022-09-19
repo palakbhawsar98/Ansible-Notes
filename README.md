@@ -1,6 +1,9 @@
 # Ansible
 Playbooks are the files where the Ansible code is written. Playbooks are written in YAML format. YAML means "Yet Another Markup Language,"
 
+#Inventory
+The Ansible inventory file defines the hosts and groups of hosts upon which commands, modules, and tasks in a playbook operate.
+
 #Vars : Vars defines the variables which you can use in your playbook. Its usage is similar to the variables in any programming language.
 Example:vars:
         car_model: 'BMW'
