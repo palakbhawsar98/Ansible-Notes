@@ -1,0 +1,17 @@
+# Sample Inventory File
+
+  # Web Servers
+  web_srv_1 ansible_host=web.com ansible_connection=ssh ansible_user=root ansible_ssh_pass=Pass
+  web_srv_2 ansible_host=web.com ansible_connection=ssh ansible_user=root ansible_ssh_pass=Pass
+  db_srv_1 ansible_host=web.com ansible_connection=ssh ansible_user=root ansible_ssh_pass=Pass
+  
+  [web_nodes]
+  web_srv_1
+  web_srv_2
+
+  [db_nodes]
+  db_srv_1
+
+  [all_nodes:children]
+  web_nodes
+  db_nodes
