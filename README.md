@@ -1,10 +1,8 @@
-<a href="https://jenkins.io">
   <picture>
-    <source width="300" media="(prefers-color-scheme: dark)" srcset="https://www.vectorlogo.zone/logos/ansible/ansible-ar21.png">
-    <img width="300" src="https://www.vectorlogo.zone/logos/ansible/ansible-ar21.png">
+    <source width="200" media="(prefers-color-scheme: dark)" srcset="https://www.vectorlogo.zone/logos/ansible/ansible-ar21.png">
+    <img width="200" src="https://www.vectorlogo.zone/logos/ansible/ansible-ar21.png">
   </picture>
-</a>
-
+  
 ### What is Ansible
 Ansible is an open source IT automation tool that automates provisioning, configuration management, application deployment, orchestration, and many other manual IT processes.
 
@@ -14,13 +12,8 @@ Ansible is an open source IT automation tool that automates provisioning, config
 - Provisionning(Setup server from scratch or cloud provisioning)
 - Orchestration(Large scale automation framework, can integrate with other tool like jenkins, docker)
 
-**Ansible is simple. No need of any agent to manage various servers. Target machines/Services are accessed by SSH, winrm & API**
+Ansible is simple. No need of any agent to manage various servers. Target machines/Services are accessed by SSH, winrm & API.
 ![image](https://user-images.githubusercontent.com/69889600/219846350-a0c53ac4-0b2f-4781-ac6c-a5dd512ea649.png)
-
-**Ansible uses the python module, python script to connect to the target machine. It dumps the python script and executed there and return the output.**
-
-![image](https://user-images.githubusercontent.com/69889600/219847528-a54c5417-127c-4e44-9762-72e4d1a33775.png)
-
 ### What is Ansible Playbook
 Playbooks are the files where the Ansible code is written. Playbooks are written in YAML format. YAML means "Yet Another Markup Language,".
 It is basically a blueprint of automation tasks—which are complex IT actions executed with limited or no human involvement.
@@ -31,10 +24,15 @@ Inventory file defines the hosts and groups of hosts upon which commands, module
 ### What is Ansible Config file
 The file that governs the behavior of all interactions performed by the control node. In Ansible’s case that default configuration file is (ansible.cfg) located in /etc/ansible/ansible.cfg. 
 
+Ansible uses the python module, python script to connect to the target machine. It dumps the python script and execute there and return the output.
+
+![image](https://user-images.githubusercontent.com/69889600/219847528-a54c5417-127c-4e44-9762-72e4d1a33775.png)
+
+### Hands-on:
 - Launch an EC2 instance and install Ansible ( This is the control machine)
 - Launch more EC2 instances to manage them 
 - Create a inventory file in your control machine in Project directory
-- Don't give password instead ive private key 
+- Don't give password instead give private key 
 
 ### Hosts Entry in Inventory file
 
@@ -233,3 +231,20 @@ Sometimes you want a task to run only when a change is made on a machine. For ex
         name: httpd
         state: restarted
 ```
+
+### Ansible Roles
+In Ansible, the role is the primary mechanism for breaking a playbook into multiple files. This simplifies writing complex playbooks, and it makes them easier to reuse.
+
+#### Command to create role
+To create ansible role, use ansible-galaxy init <role_name> to create the role directory structure.
+```
+ansible-galaxy init <role_name>
+```
+### Ansible for AWS
+Ansible is an open source tool that you can use to automate your AWS deployments. You can use it to define, deploy, and manage applications and services using automation playbooks. These playbooks enable you to define configurations once and deploy those configurations consistently across environments.
+
+#### Steps:
+- Create IAM user.
+- Authentication: Use AWS access key and secret access key as either module arguments or environmental (ENV) variables (Export keys).
+- Write playbook
+- Execute it
