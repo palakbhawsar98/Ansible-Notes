@@ -12,7 +12,7 @@ Ansible is an open source IT automation tool that automates provisioning, config
 - Provisionning(Setup server from scratch or cloud provisioning)
 - Orchestration(Large scale automation framework, can integrate with other tool like jenkins, docker)
 
-Ansible is simple. No need of any agent to manage various servers. Target machines/Services are accessed by SSH, winrm & API.
+Ansible doesn't need any agent to manage various servers. Target machines/Services are accessed by SSH, winrm & API.
 ![image](https://user-images.githubusercontent.com/69889600/219846350-a0c53ac4-0b2f-4781-ac6c-a5dd512ea649.png)
 ### What is Ansible Playbook
 Playbooks are the files where the Ansible code is written. Playbooks are written in YAML format. YAML means "Yet Another Markup Language,".
