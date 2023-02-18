@@ -12,8 +12,14 @@ Ansible is an open source IT automation tool that automates provisioning, config
 - Provisionning(Setup server from scratch or cloud provisioning)
 - Orchestration(Large scale automation framework, can integrate with other tool like jenkins, docker)
 
-Ansible doesn't need any agent to manage various servers. Target machines/Services are accessed by SSH, winrm & API.
+### How Ansible connect to remote machines
 ![image](https://user-images.githubusercontent.com/69889600/219846350-a0c53ac4-0b2f-4781-ac6c-a5dd512ea649.png)
+
+**Control machine**: A control machine is the central node in an Ansible infrastructure. It is used to manage all the other machines in the network. 
+
+**Remote machine**: A remote machine is any machine that is not the control machine. Remote machines are managed by the control machine using SSH. 
+
+**Target machine**: A target machine is a remote machine being provisioned or configured by Ansible.
 ### What is Ansible Playbook
 Playbooks are the files where the Ansible code is written. Playbooks are written in YAML format. YAML means "Yet Another Markup Language,".
 It is basically a blueprint of automation tasks—which are complex IT actions executed with limited or no human involvement.
