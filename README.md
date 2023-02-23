@@ -79,7 +79,7 @@ dbserver
 ansible_user=ubuntu
 ansible_ssh_private_key_file=instance.pem 
 ```
-Install httpd in web01 (use --become tp elevate rights as ubuntu user doesn't have permission to install https service)
+Install httpd in host_name1 (use --become tp elevate rights as ubuntu user doesn't have permission to install https service)
 ```
 ansible -i inventory -m apt-get -a "name-httpd state-present" host_name1 --become
 ```
