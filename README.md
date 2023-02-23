@@ -118,7 +118,7 @@ ansible-doc module_name
 To know more about modules search it in official Ansible documentation
 
 ### Ansible Configuration
-Change the default behaviour of ansible configuration by editing coniguration file
+Change the default behaviour of ansible configuration by editing configuration file
 
 #### Order of Ansible Config
 - ANSIBLE_CONFIG (set environment variable)
@@ -182,7 +182,7 @@ Loops are used to iterate the condition in playbook for diffrent servers:
 Syntax:
 ```
     tasks:
-         - name: Install httpd service Ubuntu
+         - name: Install httpd, git, zip service in Ubuntu
            yum: 
              name: "{{item}}"
              state: present
@@ -191,7 +191,7 @@ Syntax:
              - httpd
              - git
              - zip
-         - name: Install httpd service Centos 
+         - name: Install httpd, git, zip service in Centos 
            apt:
              name: "{{item}}"
              state: present
